@@ -32,6 +32,12 @@ void loop()
     delay(100);
   }
 }
+/*
+DEFAULT - NO REQUIERE LIBRERIAS ADICIONALES
+map(valor,ri,rf,RI,RF)
+ a=map (5,0,180,0,1800)
+
+*/
 
 /*
 sensores: leemos
