@@ -2,8 +2,8 @@
 const int potenciometro= A0;
 const int ledBlanco=3;
 
-int read=0;
-int intesidad=0;
+int reading=0;
+int intensidad=0;
 
 void setup(){
   //inicializacion del puerto serial
@@ -14,9 +14,11 @@ void setup(){
 
 void loop(){
   //para el potenciometro
-  read=analogRead(potenciometro);
-  intesidad=map(read,0,1023,0,255);
-  Serial.println(read);
-  analogRead(ledBlanco,intesidad);
+  reading=analogRead(potenciometro);
+  //0-1023 son los valores que lee o devueleve un sensor analog.
+  //0-255 son los valores que emite el actuador 
+  intensidad=map(reading,0,1023,0,255);
+  Serial.println(reading);
+  analogWrite(ledBlanco,intensidad);
   delay(500);
 }
