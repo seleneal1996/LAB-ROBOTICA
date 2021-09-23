@@ -16,7 +16,7 @@ void setup(){
   pinMode(ledBlanco,OUTPUT);
   pinMode(ledNaranja,OUTPUT);
   Serial.begin(9600);
-  Serial.println("POTEN1\LEDBLANCO\ttPOTEN2\tLEDNARANJA");
+  Serial.println("POTEN1\tLEDBLANCO\tPOTEN2\tLEDNARANJA");
 }
 
 void loop(){
